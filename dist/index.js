@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const BankAccount_1 = require("./BankAccount");
+const SavingAccount_1 = require("./SavingAccount");
+const bankAccount = new BankAccount_1.BankAccount("001", 1000000, "Ratchanon Leechareon");
+const savingAccount1 = new SavingAccount_1.SavingAccount("s001", 10000000, "Ratchanon Leechareon", 0.09);
+console.log(bankAccount.getBalnce());
+console.log(bankAccount.getownerName());
+savingAccount1.applyInterest();
+console.log(bankAccount.getBalnce());
+console.log(bankAccount.getownerName());
+savingAccount1.withdraw(50000);
+console.log("-----------------------------------------------------------");
