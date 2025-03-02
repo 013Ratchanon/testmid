@@ -1,0 +1,16 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const Account_1 = require("./Account");
+const AdminAccount_1 = require("./AdminAccount");
+console.log('################ Acount ################');
+const account = new Account_1.Account("Tae", "777", "dewtete@gmail.com");
+console.log(account.toString());
+account.changePassword('123', '456');
+console.log(account.getPassword());
+console.log('################ Acount ################');
+console.log('################ Admin Account ################');
+const adminaccount = new AdminAccount_1.AdminAccount("Admin", 'admin123', "admin@gmail.com");
+console.log(adminaccount.toString());
+adminaccount.resetPassword('8admin88');
+console.log(adminaccount.getPassword());
+console.log('################ Admin Account ################');

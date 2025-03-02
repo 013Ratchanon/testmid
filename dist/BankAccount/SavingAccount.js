@@ -8,15 +8,18 @@ class SavingAccount extends BankAccount_1.BankAccount {
         this.interestRate = interestRate;
     }
     applyInterest() {
-        const interest = this.getBalnce() * this.interestRate;
+        const interest = this.getBalance() * this.interestRate;
         this.deposit(interest);
-        console.log(`Applied interest:${this.interestRate}, new balance: ${this.getBalnce()}`);
+        console.log(`Applied interest:${this.interestRate}, new balance: ${this.getBalance()}`);
     }
-    getinterestRate() {
+    getInterestRate() {
         return this.interestRate;
     }
+    setInterestRate(rate) {
+        this.interestRate = rate;
+    }
     toString() {
-        return `SavingAccount [intersetrRate =${this.interestRate}, Bankaccount = ${super.toString()} ]`;
+        return `SavingAccount [interestRate=${this.interestRate}, bankaccount=${super.toString()}]`;
     }
 }
 exports.SavingAccount = SavingAccount;

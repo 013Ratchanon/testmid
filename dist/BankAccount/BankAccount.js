@@ -7,32 +7,32 @@ class BankAccount {
         this.balance = balance;
         this.ownerName = ownerName;
     }
-    getBalnce() {
-        return this.balance;
-    }
-    getownerName() {
-        return this.ownerName;
-    }
     deposit(amount) {
         if (amount > 0) {
             this.balance += amount;
-            console.log(`Deposit ${amount}, new balance: ${this.balance}`);
+            console.log(`Deposited ${amount}, new balance: ${this.balance}`);
         }
         else {
-            console.log("Deposit faild Amount must be a positive number.");
+            console.log(`Deposit faild! Amount must be a positive number.`);
         }
     }
     withdraw(amount) {
         if (amount <= this.balance && amount > 0) {
             this.balance -= amount;
-            console.log(`withdraw ${amount}, remaining balance: ${this.balance}`);
+            console.log(`Withdrawn: ${amount}, remaining balance: ${this.balance}`);
         }
         else {
-            console.log("Withdraw faild Insufficient balance.");
+            console.log('Withdraw faild! Insufficient balance');
         }
     }
+    getBalance() {
+        return this.balance;
+    }
+    getOwnerName() {
+        return this.ownerName;
+    }
     toString() {
-        return `BankAccount [AccountNumber = ${this.accountNumber}, Balance = ${this.balance}, OwnerName = ${this.ownerName}`;
+        return `BankAccount [accountNumber=${this.accountNumber}, balance=${this.balance}, ownerName=${this.ownerName}]`;
     }
 }
 exports.BankAccount = BankAccount;

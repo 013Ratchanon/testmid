@@ -1,0 +1,15 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const DiscountedProduct_1 = require("./DiscountedProduct");
+const Product_1 = require("./Product");
+console.log('############### Product ###############');
+const product = new Product_1.Product('P01', 'computer', 25000);
+console.log(product.toString());
+console.log('############### Product ###############');
+console.log('############### DiscountedProduct ###############');
+const discountedProduct = new DiscountedProduct_1.DiscountedProduct('P01', 'computer', 2500);
+console.log(discountedProduct.getPrice());
+discountedProduct.discountProduct(25);
+console.log(discountedProduct.getPrice());
+console.log(discountedProduct.toString());
+console.log('############### DiscountedProduct ###############');
