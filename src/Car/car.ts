@@ -8,7 +8,7 @@ export class Car {
 
     public accelerate(amount: number): void {
         this.speed += amount
-        console.log(`เร่งความเร็วเป็น ${this.speed} กม./ซม`)
+        console.log(`เร่งความเร็วเป็น ${this.speed} กม./ชม`)
     }
 
     public brake(amount: number): void {
